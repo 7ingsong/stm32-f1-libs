@@ -1,0 +1,4 @@
+add_subdirectory(Startup)
+add_subdirectory(CMSIS)
+add_subdirectory(STM32F10x_StdPeriph_Driver)
+add_subdirectory(STM32_USB-FS-Device_Driver)

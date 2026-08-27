@@ -1,0 +1,14 @@
+set(TARGET STM32F10x)
+file(GLOB SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/Device/ST/${TARGET}/Source/Templates/gcc/startup_stm32f10x_md.s"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Device/ST/${TARGET}/Source/Templates/*.c"
+)
+
+
+add_library(CMSIS STATIC ${SOURCES})
+
+target_include_directories(CMSIS PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/Device/ST/${TARGET}/Include
+    $<TARGET_PROPERTY:STM32F10x_StdPeriph_Driver,INTERFACE_INCLUDE_DIRECTORIES>
+)
