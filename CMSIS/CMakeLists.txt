@@ -1,6 +1,5 @@
 set(TARGET STM32F10x)
 file(GLOB SOURCES
-    "${CMAKE_CURRENT_SOURCE_DIR}/Device/ST/${TARGET}/Source/Templates/gcc/startup_stm32f10x_md.s"
     "${CMAKE_CURRENT_SOURCE_DIR}/Device/ST/${TARGET}/Source/Templates/*.c"
 )
 
